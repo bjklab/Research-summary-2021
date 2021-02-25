@@ -23,11 +23,12 @@ options(htmltools.dir.version = FALSE)
 xaringan::summon_remark()
 ```
 
-```{r xaringan-tile-view, echo=FALSE}
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
 xaringanExtra::use_tile_view()
 xaringanExtra::use_webcam()
 xaringanExtra::use_tachyons()
 xaringanExtra::use_animate_css()
+xaringanExtra::use_share_again()
 ```
 
 
@@ -250,9 +251,9 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-grey animated flipInX"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey"><div>Studies &<br>Results</div></div>
 <div class="extension-tile gridset-b animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
-<div class="extension-tile gridset-grey animated flipInX"><div>Future<br>Directions</div></div>
+<div class="extension-tile gridset-grey"><div>Future<br>Directions</div></div>
 </div>
 
 
@@ -304,8 +305,8 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-grey animated flipInX"><div>Studies &<br>Results</div></div>
-<div class="extension-tile gridset-grey animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-grey animated"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey animated"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-c animated flipInX"><div>Future<br>Directions</div></div>
 </div>
 
