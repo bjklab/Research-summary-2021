@@ -1,0 +1,380 @@
+---
+title: "The Death and Life of Bacterial Infections"
+subtitle: "<hr>"
+author: "Brendan J. Kelly, MD, MS"
+institute: "Infectious Diseases & Epidemiology<br><br>![](penn_logos/Penn-Shield-Logotype-White-over-Blue-RGB-Expanded.svg){width=160px}" 
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  xaringan::moon_reader:
+    #css: ["bjk_xaringan.css",default-fonts]
+    css: xaringan-themer-blue-grids.css
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringan::summon_remark()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_webcam()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_animate_css()
+```
+
+
+## Healthcare Infections & Antibiotic Resistance      
+  
+.pad-left[
+- **Healthcare-associated infections**: ~ 1.7 million cases, 100k deaths in US annually  
+
+    - 1 in 25 US hospital patients have care-related infection
+  
+    - limits the success of surgery, cancer treatment, organ transplantation   
+  
+    - 5-10% absolute attributable mortality (CDI & VAE)     
+    
+- HAIs drive an epidemic of **antibiotic resistance**:  
+
+     - antibiotic failure & recurrent infection
+     
+     - built environment   
+  
+]
+
+
+
+---
+
+## A New Paradigm for Bacterial Infection    
+  
+.pad-left[
+- <u>High-throughput sequencing</u>: a new lens on complex microbial communities  
+   
+- <u>Fecal microbiota transplant (FMT)</u>: "ecobiotic" therapies exert large effects   
+
+- **A new molecular epidemiology of infectious diseases:**  
+
+     - new <u>microbiome</u> measures & interventions  
+
+     - reframe familiar outcomes and exposures (e.g., antibiotics)
+  
+     - integrate methods and tools from microbial ecology  
+     
+     - need for new modeling and computational approaches     
+     
+]
+
+
+
+---
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a animated flipInY"><div>Studies &<br>Results</div></div>
+</div>
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-b animated flipInX"><div>Methods<br>Resources &<br>Collaborations</div></div>
+</div>
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-b"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-c animated bounceInDown"><div>Future<br>Directions</div></div>
+</div>
+
+
+
+---
+exclude: true
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-2">
+<div class="extension-tile gridset-a"><div>Case from 1981</div></div>
+<div class="extension-tile gridset-b"><div>Prevalence</div></div>
+<div class="extension-tile gridset-c"><div>Incidence</div></div>
+<div class="extension-tile gridset-d animated fadeInRight"><div>Inference from<br>Exposures &<br>Outcomes</div></div>
+<div class="extension-tile gridset-e animated bounceInUp"><div>Relative Risk<br>&<br>Odds Ratios</div></div>
+<div class="extension-tile gridset-f animated slideInLeft"><div>Data Types<br>&<br>Distributions</div></div>
+</div>
+
+
+
+---
+exclude: true
+class: full-screen hide-count
+
+<div class="grid-3-2">
+<div class="extension-tile gridset-a animated flipInY"><div>Case from 1981</div></div>
+<div class="extension-tile gridset-b animated flipInX"><div>Prevalence</div></div>
+<div class="extension-tile gridset-c animated flipInY"><div>Incidence</div></div>
+<div class="extension-tile gridset-d animated flipInX"><div>Inference from<br>Exposures &<br>Outcomes</div></div>
+<div class="extension-tile gridset-e animated flipInY"><div>Relative Risk<br>&<br>Odds Ratios</div></div>
+<div class="extension-tile gridset-f animated flipInX"><div>Data Types<br>&<br>Distributions</div></div>
+</div>
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-grey"><div>Future<br>Directions</div></div>
+</div>
+
+
+
+---
+
+## A Distance Model for MDRO Detection     
+
+.pad-left[
+
+- Distance as a "continuous category" (closer points share information)  
+  
+- GP*: a prior over functions, with 2 parameters: mean function and covariance function  
+  
+- Covariance function -- RBF kernel (exponentiated quadratic kernel):  
+  
+    - $\rho$ parameter: length scale (measure of influence on neighboring points)
+    
+    - $\alpha$: marginal standard deviation (average distance from mean function)
+  
+- Bayesian framework: $\rho$ parameter has prior, but data informs posterior  
+  
+.footnote[[*] Neal RM _Bayesian Statistics_ 1998]
+]
+
+
+
+---
+
+## Generalized Linear Model     
+
+.pad-left[
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = \beta \cdot distance_i + \alpha + \epsilon$$  
+  
+
+]
+
+
+
+---
+
+## Generalized Linear Model + Random Effect      
+
+.pad-left[
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = \beta \cdot distance_i + \alpha + \epsilon$$  
+  
+<hr style="background-color:#000000">
+
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = \beta_{MDRO[i]} \cdot distance_i + \alpha_{MDRO[i]} + \epsilon$$  
+  
+
+]
+
+
+
+---
+
+## Generalized Linear Model + GP Prior    
+
+.pad-left[
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha + \epsilon$$  
+  
+
+  
+]
+
+
+
+---
+
+## Generalized Linear Model + GP Prior + Random Effect    
+
+.pad-left[
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha + \epsilon$$  
+  
+<hr style="background-color:#000000">
+  
+  $$MDRO \sim Bernoulli(p_i)$$  
+  
+  $$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha_{{subject[i]}} + \epsilon$$  
+  
+  
+]
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-grey animated flipInX"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-b animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-grey animated flipInX"><div>Future<br>Directions</div></div>
+</div>
+
+
+
+---
+
+## MDRO Culture Results
+
+```{r cx_tab, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='50%'}
+
+#knitr::include_graphics(path = "./tabs/tab1_mdro_occurrence.png")
+
+
+
+```
+
+
+
+---
+
+## MDRO Culture ~ Distance
+
+```{r mdro_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
+
+#knitr::include_graphics(path = "./figs/p_cx_gp.svg")
+
+
+
+```
+
+
+
+---
+
+## MDRO Culture ~ Distance
+
+```{r gram_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='50%'}
+
+#knitr::include_graphics(path = "./figs/p_cx_gp_gram.svg")
+
+
+
+```
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-grey animated flipInX"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-c animated flipInX"><div>Future<br>Directions</div></div>
+</div>
+
+
+
+---
+
+## 16S rRNA ASV ~ Distance  
+
+```{r asv_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
+
+#knitr::include_graphics(path = "./figs/p_asv_gp.svg")
+
+
+
+```
+
+
+
+---
+
+## MDRO Culture vs 16S rRNA ASV
+
+```{r asv_and_mdro_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
+
+#knitr::include_graphics(path = "./figs/p_genus_clr_marginal_per_site.svg")
+
+
+
+```
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a animated flipInX"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-b animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
+<div class="extension-tile gridset-c animated flipInX"><div>Future<br>Directions</div></div>
+</div>
+
+
+
+---
+
+## MDRO Hotspots    
+  
+.pad-left[
+- Probability 
+
+
+  
+]  
+  
+  
+  
+---
+class: inverse, center, middle, hide-count
+  
+<hr style="background-color:#1381B0">  
+  
+.callout-url-middle[  
+<span style="font-size:0.5em; color:#1381B0">slides ↓ </span>
+]  
+  
+.callout-url-bottom[  
+<span style="color:#1381B0">bjklab.org</span>  
+]  
+  
+  
