@@ -35,15 +35,15 @@ xaringanExtra::use_share_again()
 ## Healthcare Infections & Antibiotic Resistance      
   
 .pad-left[
-- **Healthcare-associated infections**: ~ 1.7 million cases, 100k deaths in US annually  
+- **Healthcare-associated infections**: 
 
-    - 1 in 25 US hospital patients have care-related infection
-  
-    - limits the success of surgery, cancer treatment, organ transplantation   
-  
-    - 5-10% absolute attributable mortality (CDI & VAE)     
+    - ~ 1.7 million HAIs in US per year (1 in 25 US hospital patients)
     
-- HAIs drive an epidemic of **antibiotic resistance**:  
+    - ~ 100k deaths in US per year (5-10% absolute attributable mortality)  
+
+    - limit the success of surgery, cancer treatment, organ transplantation   
+    
+- **Epidemic of antibiotic resistance** attributed to HAIs:  
 
      - antibiotic failure & recurrent infection
      
@@ -375,7 +375,7 @@ class: inverse, center, middle, hide-count
 ]  
   
 .callout-url-bottom[  
-<span style="color:#1381B0">bjklab.org</span>  
+<span style="color:#1381B0">[bjklab.org](http://www.bjklab.org)</span>  
 ]  
   
   
