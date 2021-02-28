@@ -80,7 +80,7 @@ xaringanExtra::use_share_again()
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-a animated flipInY"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-a animated flipInY"><div>Studies &<br>Key Results</div></div>
 </div>
 
 
@@ -89,7 +89,7 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-a"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-b animated flipInX"><div>Methods<br>Resources &<br>Collaborations</div></div>
 </div>
 
@@ -99,7 +99,7 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-a"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-b"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-c animated bounceInDown"><div>Future<br>Directions</div></div>
 </div>
@@ -142,7 +142,7 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-a"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-a"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-grey"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-grey"><div>Future<br>Directions</div></div>
 </div>
@@ -251,7 +251,7 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-grey"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-b animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-grey"><div>Future<br>Directions</div></div>
 </div>
@@ -260,43 +260,77 @@ class: full-screen hide-count
 
 ---
 
-## MDRO Culture Results
+## Methods, Resources & Collaborations        
 
-```{r cx_tab, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='50%'}
-
-#knitr::include_graphics(path = "./tabs/tab1_mdro_occurrence.png")
-
-
-
-```
-
-
-
----
-
-## MDRO Culture ~ Distance
-
-```{r mdro_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
-
-#knitr::include_graphics(path = "./figs/p_cx_gp.svg")
-
-
-
-```
+.pad-left[
+  
+<u>Measurement</u>: **Director, Antibiotic Resistance Epidemiologic Studies (ARES) Laboratory**  
+  
+- bacterial culture, microbiome & whole genome sequencing  
+  
+- ARES lab investigators: Kelly / Lautenbach / David / Ziegler / Anesi  
+  
+- collaborations with microbiology (Bushman, Abt, Zackular)  
+  
+  
+]
 
 
 
 ---
 
-## MDRO Culture ~ Distance
+## Methods, Resources & Collaborations        
 
-```{r gram_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='50%'}
+.pad-left[
+  
+<u>Measurement</u>: **Director, Antibiotic Resistance Epidemiologic Studies (ARES) Laboratory**  
+  
+- bacterial culture, microbiome & whole genome sequencing  
+  
+- ARES lab investigators: Kelly / Lautenbach / David / Ziegler / Anesi  
+  
+- collaborations with microbiology (Bushman, Abt, Zackular)  
+  
+<hr style="background-color:#000000">  
+  
+<u>Modeling</u>: **Multilevel Bayesian Regression for Microbiome Data**
+  
+- collaboration with Dr. Jason Roy (DBEI → Rutgers University): mediation   
+  
 
-#knitr::include_graphics(path = "./figs/p_cx_gp_gram.svg")
+]
 
 
 
-```
+---
+
+## Methods, Resources & Collaborations        
+
+.pad-left[
+  
+<u>Measurement</u>: **Director, Antibiotic Resistance Epidemiologic Studies (ARES) Laboratory**  
+  
+- bacterial culture, microbiome & whole genome sequencing  
+  
+- ARES lab investigators: Kelly / Lautenbach / David / Ziegler / Anesi  
+  
+- collaborations with microbiology (Bushman, Abt, Zackular)  
+  
+<hr style="background-color:#000000">  
+  
+<u>Modeling</u>: **Multilevel Bayesian Regression for Microbiome Data**
+  
+- collaboration with Dr. Jason Roy (DBEI → Rutgers University): mediation    
+   
+<hr style="background-color:#000000">  
+  
+<u>Teaching</u>: **EPID 674: Measuring the Microbiome**  
+  
+- created & co-direct course (Dr. Kyle Bittinger, PCMP)    
+  
+
+
+]
 
 
 
@@ -305,7 +339,7 @@ layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-grey animated"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-grey animated"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-grey animated"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-c animated flipInX"><div>Future<br>Directions</div></div>
 </div>
@@ -313,58 +347,17 @@ class: full-screen hide-count
 
 
 ---
-
-## 16S rRNA ASV ~ Distance  
-
-```{r asv_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
-
-#knitr::include_graphics(path = "./figs/p_asv_gp.svg")
-
-
-
-```
-
-
-
----
-
-## MDRO Culture vs 16S rRNA ASV
-
-```{r asv_and_mdro_fig, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='75%'}
-
-#knitr::include_graphics(path = "./figs/p_genus_clr_marginal_per_site.svg")
-
-
-
-```
-
-
-
----
 layout: false
 class: full-screen hide-count
 
 <div class="grid-3-1">
-<div class="extension-tile gridset-a animated flipInX"><div>Studies &<br>Results</div></div>
+<div class="extension-tile gridset-a animated flipInX"><div>Studies &<br>Key Results</div></div>
 <div class="extension-tile gridset-b animated flipInY"><div>Methods<br>Resources &<br>Collaborations</div></div>
 <div class="extension-tile gridset-c animated flipInX"><div>Future<br>Directions</div></div>
 </div>
 
 
 
----
-
-## MDRO Hotspots    
-  
-.pad-left[
-- Probability 
-
-
-  
-]  
-  
-  
-  
 ---
 class: inverse, center, middle, hide-count
   
