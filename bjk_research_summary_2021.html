@@ -4,7 +4,7 @@
     <title>The Death and Life of Bacterial Infections</title>
     <meta charset="utf-8" />
     <meta name="author" content="Brendan J. Kelly, MD, MS" />
-    <meta name="date" content="2021-02-28" />
+    <meta name="date" content="2021-03-01" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
     <script src="libs/xaringanExtra-webcam/webcam.js"></script>
@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ## <hr>
 ### Brendan J. Kelly, MD, MS
 ### Infectious Diseases &amp; Epidemiology<br><br><img src="penn_logos/Penn-Shield-Logotype-White-over-Blue-RGB-Expanded.svg" width="160" />
-### 28 February 2021
+### 01 March 2021
 
 ---
 
@@ -47,12 +47,12 @@ class: center, middle, inverse, title-slide
 
     - limit the success of surgery, cancer treatment, organ transplantation   
     
-- **Epidemic of antibiotic resistance** attributed to HAIs:  
+- HAIs drive an **epidemic of antibiotic resistance**:  
 
-     - antibiotic failure &amp; recurrent infection
+     - 2.8 million antibiotic-resistant infections in US per year  
      
-     - built environment   
-  
+     - 35,000 deaths from AR infections in US per year  
+     
 ]
 
 
@@ -84,7 +84,7 @@ class: center, middle, inverse, title-slide
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-a animated flipInY"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-a animated flipInY"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 
@@ -93,7 +93,7 @@ layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-b animated flipInX"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -103,7 +103,7 @@ layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-b"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-c animated bounceInDown"&gt;&lt;div&gt;Future&lt;br&gt;Directions&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -146,7 +146,7 @@ layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Future&lt;br&gt;Directions&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -155,75 +155,36 @@ class: full-screen hide-count
 
 ---
 
-## A Distance Model for MDRO Detection     
+## Studies &amp; Key Findings          
 
 .pad-left[
-
-- Distance as a "continuous category" (closer points share information)  
   
-- GP*: a prior over functions, with 2 parameters: mean function and covariance function  
+**Bacterial pneumonia during critical illness**  
   
-- Covariance function -- RBF kernel (exponentiated quadratic kernel):  
-  
-    - `\(\rho\)` parameter: length scale (measure of influence on neighboring points)
+- 3 prospective cohort studies (K23 NIAID, CDC BAA 2016, CDC BAA 2018)  
+- respiratory microbiome → pneumonia; commensal bacteria reduce infection risk  
     
-    - `\(\alpha\)`: marginal standard deviation (average distance from mean function)
-  
-- Bayesian framework: `\(\rho\)` parameter has prior, but data informs posterior  
-  
-.footnote[[*] Neal RM _Bayesian Statistics_ 1998]
 ]
 
 
 
 ---
 
-## Generalized Linear Model     
-
+## Studies &amp; Key Findings  
+  
 .pad-left[
   
-  `$$MDRO \sim Bernoulli(p_i)$$`  
+**Bacterial pneumonia during critical illness**  
   
-  `$$logit(p_i) = \beta \cdot distance_i + \alpha + \epsilon$$`  
+- 3 prospective cohort studies (K23 NIAID, CDC BAA 2016, CDC BAA 2018)  
+- respiratory microbiome → pneumonia; commensal bacteria reduce infection risk  
+    
+&lt;hr style="background-color:#000000"&gt;  
   
-
-]
-
-
-
----
-
-## Generalized Linear Model + Random Effect      
-
-.pad-left[
+**Clostridioides difficile infection and colitis**  
   
-  `$$MDRO \sim Bernoulli(p_i)$$`  
-  
-  `$$logit(p_i) = \beta \cdot distance_i + \alpha + \epsilon$$`  
-  
-&lt;hr style="background-color:#000000"&gt;
-
-  
-  `$$MDRO \sim Bernoulli(p_i)$$`  
-  
-  `$$logit(p_i) = \beta_{MDRO[i]} \cdot distance_i + \alpha_{MDRO[i]} + \epsilon$$`  
-  
-
-]
-
-
-
----
-
-## Generalized Linear Model + GP Prior    
-
-.pad-left[
-  
-  `$$MDRO \sim Bernoulli(p_i)$$`  
-  
-  `$$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha + \epsilon$$`  
-  
-
+- prospective cohort study (CDC BAA 2016): commensal bacteria reduce recurrence   
+- randomized trial of fecal transplant (CDC - Lautenbach PI)  
   
 ]
 
@@ -231,20 +192,28 @@ class: full-screen hide-count
 
 ---
 
-## Generalized Linear Model + GP Prior + Random Effect    
-
+## Studies &amp; Key Findings  
+  
 .pad-left[
   
-  `$$MDRO \sim Bernoulli(p_i)$$`  
+**Bacterial pneumonia during critical illness**  
   
-  `$$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha + \epsilon$$`  
+- 3 prospective cohort studies (K23 NIAID, CDC BAA 2016, CDC BAA 2018)  
+- respiratory microbiome → pneumonia; commensal bacteria reduce infection risk  
   
-&lt;hr style="background-color:#000000"&gt;
+&lt;hr style="background-color:#000000"&gt;  
   
-  `$$MDRO \sim Bernoulli(p_i)$$`  
+**Clostridioides difficile infection and colitis**  
   
-  `$$logit(p_i) = GP_{MDRO[i]}(distance_i) + \alpha_{{subject[i]}} + \epsilon$$`  
+- prospective cohort study (CDC BAA 2016): commensal bacteria reduce recurrence   
+- randomized trial of fecal transplant (CDC - Lautenbach PI)  
   
+&lt;hr style="background-color:#000000"&gt;  
+  
+**COVID-19**  
+  
+- bacterial superinfection, antibiotic use and resistance (CDC - Lautenbach PI)  
+- molecular epidemiology of SARS-CoV-2 ~ vaccination (Kelly PI, Wiebe Co-I)  
   
 ]
 
@@ -255,7 +224,7 @@ layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-b animated flipInY"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Future&lt;br&gt;Directions&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -343,7 +312,7 @@ layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-grey animated"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey animated"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-grey animated"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-c animated flipInX"&gt;&lt;div&gt;Future&lt;br&gt;Directions&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -351,11 +320,78 @@ class: full-screen hide-count
 
 
 ---
+
+## Future Directions          
+  
+.pad-left[
+  
+**Bacterial pneumonia during critical illness**  
+  
+- integrate novel measures (resistome, virome) with modeling framework    
+- visiting professorship University of Michigan    
+    
+]
+
+
+
+---
+
+## Future Directions    
+  
+.pad-left[
+  
+**Bacterial pneumonia during critical illness**  
+  
+- integrate novel measures (resistome, virome) with modeling framework    
+- visiting professorship University of Michigan    
+    
+&lt;hr style="background-color:#000000"&gt;  
+  
+**Clostridioides difficile infection and colitis**  
+  
+- methods of microbiome modification &amp; new indications     
+- appointed IDSA representative on AGA's FMT Steering Committee    
+  
+]
+
+
+
+---
+  
+## Future Directions    
+  
+.pad-left[
+  
+**Bacterial pneumonia during critical illness**  
+  
+- integrate novel measures (resistome, virome) with modeling framework    
+- visiting professorship University of Michigan    
+    
+&lt;hr style="background-color:#000000"&gt;  
+  
+**Clostridioides difficile infection and colitis**  
+  
+- methods of microbiome modification &amp; new indications     
+- appointed IDSA representative on AGA's FMT Steering Committee    
+  
+&lt;hr style="background-color:#000000"&gt;  
+  
+**COVID-19**  
+  
+- spatial component to molecular epidemiology of infectious diseases      
+- collaboration with Doug Wiebe &amp; SpaceTimeEpi Group    
+  
+]
+
+
+
+---
+exclude: true
 layout: false
 class: full-screen hide-count
 
 &lt;div class="grid-3-1"&gt;
-&lt;div class="extension-tile gridset-a animated flipInX"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Results&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-a animated flipInX"&gt;&lt;div&gt;Studies &amp;&lt;br&gt;Key Findings&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-b animated flipInY"&gt;&lt;div&gt;Methods&lt;br&gt;Resources &amp;&lt;br&gt;Collaborations&lt;/div&gt;&lt;/div&gt;
 &lt;div class="extension-tile gridset-c animated flipInX"&gt;&lt;div&gt;Future&lt;br&gt;Directions&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
