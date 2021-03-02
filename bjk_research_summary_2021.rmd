@@ -177,7 +177,7 @@ class: full-screen hide-count
     
 <hr style="background-color:#000000">  
   
-**Clostridioides difficile infection and colitis**  
+**<i>Clostridioides difficile</i> infection and colitis**  
   
 - prospective cohort study (CDC BAA 2016): commensal bacteria reduce recurrence   
 - randomized trial of fecal transplant (CDC - Lautenbach PI)  
@@ -199,7 +199,7 @@ class: full-screen hide-count
   
 <hr style="background-color:#000000">  
   
-**Clostridioides difficile infection and colitis**  
+**<i>Clostridioides difficile</i> infection and colitis**  
   
 - prospective cohort study (CDC BAA 2016): commensal bacteria reduce recurrence   
 - randomized trial of fecal transplant (CDC - Lautenbach PI)  
@@ -343,7 +343,7 @@ class: full-screen hide-count
     
 <hr style="background-color:#000000">  
   
-**Clostridioides difficile infection and colitis**  
+**<i>Clostridioides difficile</i> infection and colitis**  
   
 - methods of microbiome modification & new indications     
 - appointed IDSA representative on AGA's FMT Steering Committee    
@@ -365,7 +365,7 @@ class: full-screen hide-count
     
 <hr style="background-color:#000000">  
   
-**Clostridioides difficile infection and colitis**  
+**<i>Clostridioides difficile</i> infection and colitis**  
   
 - methods of microbiome modification & new indications     
 - appointed IDSA representative on AGA's FMT Steering Committee    
