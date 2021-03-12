@@ -422,11 +422,9 @@ class: hide-count
 background-image: url(img/cdc-aQOe0Ri267U-unsplash.jpg)
 background-size: cover
 
-.fade-in[
 .callout-url-bottom[  
-<span style="font-size:0.5em; color:white">slides ↓ </span>  
+.fade-in[<span style="font-size:0.5em; color:white">slides ↓ </span>]  
 <span style="link-color:white">[bjklab.org](http://www.bjklab.org)</span>  
-]  
 ]  
 
 
