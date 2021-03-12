@@ -7,17 +7,19 @@ date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
   xaringan::moon_reader:
     #css: ["bjk_xaringan.css",default-fonts]
-    css: xaringan-themer-blue-grids.css
+    css: xaringan-themer-blue-grids-fade.css
     lib_dir: libs
     chakra: libs/remark-latest.min.js
+    seal: false
     nature:
       ratio: 16:9
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      slideNumberFormat: "%current%"
 
 ---
-
+exclude: true
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 xaringan::summon_remark()
@@ -31,6 +33,27 @@ xaringanExtra::use_animate_css()
 xaringanExtra::use_share_again()
 ```
 
+---
+background-image: url(img/cdc-aQOe0Ri267U-unsplash.jpg)
+background-size: cover
+class: middle left hide-count
+.fade-in[
+# <span style='color:white'>The Death and Life of Bacterial Infections</span>
+]
+.fade-in[
+.callout-url-leftcorner[
+<span style='font-size:0.75em;font-weight:bold;color:white'>
+Brendan J. Kelly, MD, MS  
+Infectious Diseases & Epidemiology  
+University of Pennsylvania  
+</span>
+<span style='font-size:0.5em;font-weight:bold;color:white;'>
+`r format(Sys.Date(), '%d %B %Y')`
+</span>
+]
+]
+
+---
 
 ## Healthcare Infections & Antibiotic Resistance      
   
@@ -395,6 +418,21 @@ class: full-screen hide-count
 
 
 ---
+class: hide-count
+background-image: url(img/cdc-aQOe0Ri267U-unsplash.jpg)
+background-size: cover
+
+.fade-in[
+.callout-url-bottom[  
+<span style="font-size:0.5em; color:white">slides ↓ </span>  
+<span style="link-color:white">[bjklab.org](http://www.bjklab.org)</span>  
+]  
+]  
+
+
+
+---
+exclude: true
 class: inverse, center, middle, hide-count
   
 <hr style="background-color:#1381B0">  
