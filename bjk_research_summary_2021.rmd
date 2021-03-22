@@ -98,7 +98,24 @@ University of Pennsylvania
 ]
 
 
-
+---
+  
+## Mission    
+    
+.pad-left[  
+- International leadership in understanding complex microbial communities and their relationship to infectious diseases:  
+  
+    - how are complex microbial communities best measured?  
+    
+    - how is their behavior and relationship to disease best modeled?  
+    
+    - how can they be altered to prevent and cure infectious diseases?  
+    
+    - how can novel strategies address the epidemic of antibiotic resistance?  
+     
+]
+  
+  
 ---
 class: full-screen hide-count
 
